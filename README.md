@@ -14,7 +14,7 @@ The following samples are available in this repo.
 
 | Name | Description  | Trigger | Input | Output |
 |------|--------------|---------|-------|--------|
-| [HttpTrigger](https://github.com/craigshoemaker/azure-functions-binding-javascript/tree/master/HttpTrigger) | Triggered by an HTTP request. | Http | N/A | Http |
-| [HttpTriggerRoute](https://github.com/craigshoemaker/azure-functions-binding-javascript/tree/master/HttpTriggerRoute) | Triggered by an HTTP request, writes a queue message. | Http | N/A | Queue |
-| [HttpAndTable](https://github.com/craigshoemaker/azure-functions-binding-javascript/tree/master/HttpAndTable) | Triggered by an HTTP request, writes a queue message. | Http | Table | Http |
-| [QueueTrigger](https://github.com/craigshoemaker/azure-functions-binding-javascript/tree/master/QueueTrigger) | Reads a queue message | Queue | Queue | N/A |
+| [HttpTrigger](HttpTrigger) | Triggered by an HTTP request. | Http | N/A | Http |
+| [HttpTriggerRoute](HttpTriggerRoute) | Triggered by an HTTP request, writes a queue message. | Http | N/A | Queue |
+| [HttpAndTable](HttpAndTable) | Triggered by an HTTP request, writes a queue message. | Http | Table | Http |
+| [QueueTrigger](QueueTrigger) | Reads a queue message | Queue | Queue | N/A |
