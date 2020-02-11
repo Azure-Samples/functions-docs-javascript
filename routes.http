@@ -1,0 +1,15 @@
+
+# HttpTrigger
+GET http://localhost:7071/api/HttpTrigger?name=Azure HTTP/1.1
+
+
+# HttpTriggerRoute
+GET http://localhost:7071/api/people/bill HTTP/1.1
+
+
+# HttpAndTable
+GET http://localhost:7071/api/products/1 HTTP/1.1
+
+GET http://localhost:7071/api/products/does-not-exist HTTP/1.1
+GET http://localhost:7071/api/products/ HTTP/1.1
+

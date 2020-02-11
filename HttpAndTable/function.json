@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "route": "products/{id}"
+    },
+    {
+      "type": "table",
+      "direction": "in",
+      "name": "product",
+      "partitionKey": "products",
+      "tableName": "products",
+      "connection": "AzureWebJobsStorage",
+      "rowKey": "{id}"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    }
+  ]
+}
