@@ -1,7 +1,7 @@
 const { app, output } = require('@azure/functions');
 
 const sendToQueue = output.storageQueue({
-    queueName: 'messages',
+    queueName: 'outqueue',
     connection: 'AzureWebJobsStorage',
 });
 
@@ -16,9 +16,9 @@ app.http('httpExample', {
 
             const name = request.query.get('name') || await request.text();
             if (name) {
-                const msg = `Hello, ${name}!`
+                const msg = `Name passed to the function ${name}`
                 context.extraOutputs.set(sendToQueue, [msg]);
-                return { body: `Hello, ${name}!` };
+                return { body: msg };
             } else {
                 return { status: 404, body: 'Missing required data' };
             }
