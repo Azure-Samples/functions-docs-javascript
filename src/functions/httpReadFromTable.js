@@ -1,22 +1,22 @@
 const { app, input } = require('@azure/functions');
 
-const tableInput = input.generic({
-    type: 'table',
+const readFromTable = input.table({
     partitionKey: 'car',
     tableName: 'product',
-    rowKey: '{id}',
+   rowKey: '{id}',
+   connection: 'AzureWebJobsStorage',
 });
 
 app.http('httpAndTable', {
     methods: ['GET'],
     connection: 'AzureWebJobsStorage',
     route: "products/{id}",
-    extraInputs: [tableInput],
+    extraInputs: [readFromTable],
     handler: (request, context) => {
 
         try {
 
-            context.log(`id: ${request.params.id}`);
+            context.log(`id: ${request.params.id}`); 
 
             const product = context.extraInputs.get(tableInput);
             context.log(`Product: ${JSON.stringify(product)}`);
