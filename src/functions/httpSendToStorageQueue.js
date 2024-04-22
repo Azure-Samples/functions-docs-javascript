@@ -5,7 +5,7 @@ const sendToQueue = output.storageQueue({
     connection: 'AzureWebJobsStorage',
 });
 
-app.http('httpAndStorageQueue', {
+app.http('httpExample', {
     methods: ['GET', 'POST'],
     extraOutputs: [sendToQueue],
     authLevel: 'anonymous',
