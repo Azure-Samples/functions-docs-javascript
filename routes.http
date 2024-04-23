@@ -13,3 +13,6 @@ GET http://localhost:7071/api/products/1 HTTP/1.1
 GET http://localhost:7071/api/products/does-not-exist HTTP/1.1
 GET http://localhost:7071/api/products/ HTTP/1.1
 
+# HTTP request to send to Storage Queue
+GET http://localhost:7071/api/HttpExample?name=Azure HTTP 1.1
+
