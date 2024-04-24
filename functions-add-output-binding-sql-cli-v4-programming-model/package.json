@@ -1,0 +1,14 @@
+{
+  "name": "functions-add-output-binding-storage-queue-cli-v4-programming-model",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "func start --verbose",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "crypto": "^1.0.1"
+  },
+  "main": "src/functions/*.js"
+}
