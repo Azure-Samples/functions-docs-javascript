@@ -3,8 +3,8 @@ const { app, input } = require('@azure/functions');
 const readFromTable = input.table({
     partitionKey: 'car',
     tableName: 'product',
-   rowKey: '{id}',
-   connection: 'AzureWebJobsStorage',
+    rowKey: '{id}',
+    connection: 'AzureWebJobsStorage',
 });
 
 app.http('httpAndTable', {
@@ -16,15 +16,15 @@ app.http('httpAndTable', {
 
         try {
 
-            context.log(`id: ${request.params.id}`); 
+            context.log(`id: ${request.params.id}`);
 
-            const product = context.extraInputs.get(tableInput);
+            const product = context.extraInputs.get(readFromTable);
             context.log(`Product: ${JSON.stringify(product)}`);
 
             if (product) {
                 return {
                     status: 200,
-                    jsonBody:product
+                    jsonBody: product
                 };
             } else {
                 return {
