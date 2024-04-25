@@ -4,10 +4,23 @@
   "description": "",
   "scripts": {
     "start": "func start --verbose",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "lint": "prettier -w src"
   },
   "dependencies": {
-    "@azure/functions": "^4.0.0"
+    "@azure/functions": "^4.0.0",
+    "prettier": "^3.2.5"
   },
-  "main": "src/functions/*.js"
+  "main": "src/functions/*.js",
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+  }
 }
