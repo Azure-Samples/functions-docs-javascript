@@ -2,8 +2,12 @@
   "name": "",
   "version": "",
   "description": "",
-  "scripts" : {
-    "test": "echo \"No tests yet...\""
+  "scripts": {
+    "test": "echo \"No tests yet...\"",
+    "lint": "prettier -w HttpExample"
   },
-  "author": ""
+  "author": "",
+  "dependencies": {
+    "prettier": "^3.2.5"
+  }
 }
