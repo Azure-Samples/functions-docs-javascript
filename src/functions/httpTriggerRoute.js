@@ -9,7 +9,7 @@ app.http('httpTriggerRoute', {
       context.log(`Http function processed request for url "${request.url}"`);
 
       const name = request.params.name;
-      console.log(`Name: ${name}`);
+      context.log(`Name: ${name}`);
 
       if (!name) {
         return { status: 404, body: 'Not Found' };
