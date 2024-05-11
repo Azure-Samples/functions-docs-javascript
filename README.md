@@ -29,10 +29,10 @@ The following samples are available in this repo.
 
 | Name | Description  | Trigger | Input | Output |
 |------|--------------|---------|-------|--------|
-| [HttpTrigger](HttpTrigger) | Triggered by an HTTP request. | Http | N/A | Http |
-| [HttpTriggerRoute](HttpTriggerRoute) | Triggered by an HTTP request, writes a queue message. | Http | N/A | Queue |
-| [HttpAndTable](HttpAndTable) | Triggered by an HTTP request, writes a queue message. | Http | Table | Http |
-| [QueueTrigger](QueueTrigger) | Reads a queue message | Queue | Queue | N/A |
+| [HttpTrigger](src/functions/httpTrigger.js) | Triggered by an HTTP request. | Http | N/A | Http |
+| [HttpTriggerRoute](src/functions/httpTriggerRoute.js) | Triggered by an HTTP request, writes a queue message. | Http | N/A | Queue |
+| [HttpAndTable](src/functions/httpReadFromTable.js) | Triggered by an HTTP request, writes a queue message. | Http | Table | Http |
+| [QueueTrigger](src/functions/readFromStorageQueue.js) | Reads a queue message | Queue | Queue | N/A |
 
 ## Samples with extra outputs
 
